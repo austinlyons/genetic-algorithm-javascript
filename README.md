@@ -33,6 +33,17 @@ Most of the interesting code is in [agent.js](https://github.com/austinlyons/gen
 
 ## Examples
 ```
+[1]: 21 from (3 * 7)
+[2]: 23 from ((3 * 7) + 2)
+[3]: 42 from ((3 * 7) * 2)
+finished simulation in 3 generations
+{ steps: 3,
+  expression: '((3 * 7) * 2)',
+  value: 42,
+  history: [ 'extend', 'mutate' ] }
+```
+
+```
 [1]: 15 from (6 + 9)
 [2]: 54 from (6 * 9)
 [3]: 54 from (6 * 9)
@@ -44,8 +55,9 @@ finished simulation in 6 generations
   expression: '(((6 * 9) - 5) - 7)',
   value: 42,
   history: [ 'mutate', 'no-op', 'extend', 'no-op', 'extend' ] }
+```
 
-
+```
 [1]: 16 from (7 + 9)
 [2]: 21 from ((7 + 9) + 5)
 [3]: 21 from ((7 + 9) + 5)

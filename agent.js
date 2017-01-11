@@ -7,10 +7,11 @@ class Agent {
 
     // Percent chance of choosing each genetic operator
     this.EXTEND = 0.25;
-    this.MUTATE = 0.25;
+    this.MUTATE = 0.40;
     this.REMOVE = 0.25;
-    this.NO_OP = 0.25;
-    if (this.EXTEND + this.MUTATE + this.REMOVE + this.NO_OP !== 1) throw "Invalid ratios; must sum to 1"
+    this.NO_OP = 0.10;
+    const total = this.EXTEND + this.MUTATE + this.REMOVE + this.NO_OP;
+    if (Math.round(total * 100) !== 100) throw "Invalid ratios; must sum to 1"
 
     // keep track of steps for fun and debugging
     this._history = previousWinner ? [...previousWinner._history] : [];
