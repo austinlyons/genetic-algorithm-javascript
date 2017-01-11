@@ -1,7 +1,7 @@
 const Agent = require('./agent');
 
 class Simulation {
-  constructor(target = 42, numAgents = 4, maxGenerations = 100, debug = true) {
+  constructor(target = 42, numAgents = 10, maxGenerations = 100, debug = true) {
     // TARGET is the "solution" that we are trying to generate an expression for
     this.TARGET = target;
     // NUM_AGENTS is the number of agents that will try to guess a solution

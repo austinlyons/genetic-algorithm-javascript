@@ -5,7 +5,7 @@ A toy problem to illustrate basic concepts of genetic algorithms.
 The basic concept is to start with a solution and try to generate an expression that evaluates to that solution.
 For example, if our solution is the number 42 we'll try to generate expressions like ```(6 * 7)``` or ```((4 * 10) + 2)```
 
-We try to "evolve" this through random guesses and selection. For each iteration of the simulation we create several agents (see `agent.js`), let them all guess at an expression, and pick the expression that evaluates closest to the target. For example, if the solution is `42` and are two agents with guesses `(2 - 1)` and `(6 * 6)`, we'll choose `(6 * 6)` as the winner of this generation. The next generation of agents will then inherit their ancestor's expression, e.g. they would start with the expression `(6 * 6)` and guess again.
+We try to "evolve" this through random guesses and selection. For each iteration of the simulation we create several agents, let them all guess at an expression, and pick the expression that evaluates closest to the target. For example, if the solution is `42` and are two agents with guesses `(2 - 1)` and `(6 * 6)`, we'll choose `(6 * 6)` as the winner of this generation. The next generation of agents will then inherit their ancestor's expression, e.g. they would start with the expression `(6 * 6)` and guess again.
 
 During each generation we randomly choose from several genetic operators to apply to an agent.
 One option is `extend`, where a random operator and operand are concatenated to the
@@ -31,6 +31,20 @@ You may have to `$ nvm install 7.3`
 ## Results
 
 ## Example
+```
+[1]: 16 from (7 + 9)
+[2]: 21 from ((7 + 9) + 5)
+[3]: 21 from ((7 + 9) + 5)
+[4]: 27 from (((7 + 9) + 5) + 6)
+[5]: 36 from ((((7 + 9) + 5) + 6) + 9)
+[6]: 44 from (((((7 + 9) + 5) + 6) + 9) + 8)
+[7]: 42 from ((((((7 + 9) + 5) + 6) + 9) + 8) - 2)
+finished simulation in 7 generations
+{ steps: 7,
+  expression: '((((((7 + 9) + 5) + 6) + 9) + 8) - 2)',
+  value: 42,
+  history: [ 'extend', 'no-op', 'extend', 'extend', 'extend', 'extend' ] }
+```
 
 ## Hypothesis & Future Work
 

@@ -4,7 +4,7 @@ let average = (array) => array.reduce((a, b) => a + b) / array.length;
 
 class RunSimulations {
 
-  static runOnce(target = 42, numAgents = 5, maxGenerations = 100, debug = true) {
+  static runOnce(target = 42, numAgents = 10, maxGenerations = 100, debug = true) {
     const simulation = new Simulation(target, numAgents, maxGenerations, debug);
     simulation.simulate();
     console.log(simulation.results());
