@@ -27,6 +27,7 @@ To run this code, install node and nvm then
 You may have to `$ nvm install 7.3`
 
 ## Code
+Most of the interesting code is in [agent.js](https://github.com/austinlyons/genetic-algorithm-javascript/blob/master/agent.js)
 
 ## Results
 
