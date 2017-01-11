@@ -30,8 +30,21 @@ You may have to `$ nvm install 7.3`
 
 ## Results
 
-## Example
+## Examples
 ```
+[1]: 15 from (6 + 9)
+[2]: 54 from (6 * 9)
+[3]: 54 from (6 * 9)
+[4]: 49 from ((6 * 9) - 5)
+[5]: 49 from ((6 * 9) - 5)
+[6]: 42 from (((6 * 9) - 5) - 7)
+finished simulation in 6 generations
+{ steps: 6,
+  expression: '(((6 * 9) - 5) - 7)',
+  value: 42,
+  history: [ 'mutate', 'no-op', 'extend', 'no-op', 'extend' ] }
+
+
 [1]: 16 from (7 + 9)
 [2]: 21 from ((7 + 9) + 5)
 [3]: 21 from ((7 + 9) + 5)
